@@ -1,0 +1,1393 @@
+
+ControlCategory      : Apps
+ControlName          : meeting_restrictanonymousjoin_v1
+Description          : By restricting anonymous users from joining Microsoft Teams meetings, you have full control over meeting access. Anonymous users may not be from your organization and could have joined for malicious purposes, such as gaining information about your organization through conversations.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2023-12-20T07:46:45Z], [implementationStatus, current status: On], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : meeting_pstnusersbypasslobby_v1
+Description          : Dial-in users aren’t authenticated though the Teams app. Increase the security of your meetings by preventing these unknown users from bypassing the lobby and immediately joining the meeting.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2023-12-20T07:46:45Z], [implementationStatus, ], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : meeting_externalrequestcontrol_v1
+Description          : External participants are users that are outside your organization. Limiting their permission to share content, add new users, and more protects your organization’s information from data leaks, inappropriate content being shared, or malicious actors joining the meeting.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2023-12-20T07:46:45Z], [implementationStatus, ], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : meeting_anonymousstartmeeting_v1
+Description          : If anonymous users are allowed to start meetings, they can admit any users from the lobbies, authenticated or otherwise. Anonymous users haven’t been authenticated, which can increase the risk of data leakage.
+Score                : 1
+AdditionalProperties : {[lastSynced, 2023-12-20T07:46:45Z], [implementationStatus, ], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : meeting_autoadmitusers_v1
+Description          : Users who aren’t invited to a meeting shouldn’t be let in automatically, because it increases the risk of data leaks, inappropriate content being shared, or malicious actors joining. If only invited users are automatically admitted, then users who weren’t invited will be sent to a meeting lobby. The host can then decide whether or not to let them in.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2023-12-20T07:46:45Z], [implementationStatus, ], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : meeting_designatedpresenter_v1
+Description          : Only allow users with presenter rights to share content during meetings. Restricting who can present limits meeting disruptions and reduces the risk of unwanted or inappropriate content being shared.  
+Score                : 0
+AdditionalProperties : {[lastSynced, 2023-12-20T07:46:45Z], [implementationStatus, ], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : mdo_atpprotection
+Description          : Microsoft Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams protects your organization from inadvertently sharing malicious files.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, ], [on, true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : mdo_safedocuments
+Description          : Safe Documents uses Microsoft Defender for Endpoint to scan documents and files for malicious content. To keep you protected, Safe Documents sends files to the Defender for Endpoint cloud for analysis. Files sent by Safe Documents are not retained in Defender for Endpoint beyond the time needed for analysis (typically, less than 24 hours).
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, ], [on, true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : mdo_zapspam
+Description          : <p>For&nbsp;<strong>unread messages</strong>&nbsp;that are identified as spam after delivery, the ZAP outcome depends on the action that's configured for the Spam filtering verdict in the applicable anti-spam policy.</p>
+                       <p>For additional information, see&nbsp;<a href="https://docs.microsoft.com/microsoft-365/security/office-365-security/zero-hour-auto-purge">Zero-hour auto purge (ZAP) in Exchange Online</a>.</p>
+Score                : 1
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_zapphish
+Description          : <p>For&nbsp;<strong>read or unread messages</strong>&nbsp;that are identified as phishing after delivery, the ZAP outcome depends on the action that's configured for a Phishing email filtering verdict in the applicable anti-phishing policy.</p>
+                       <p>For additional information, see&nbsp;<a href="https://docs.microsoft.com/microsoft-365/security/office-365-security/zero-hour-auto-purge">Zero-hour auto purge (ZAP) in Exchange Online</a>.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_zapmalware
+Description          : <p>Zero-hour auto purge (ZAP) quarantines the message that contains malware attachment for both&nbsp;<strong>read, as well as unread, messages</strong>&nbsp;that are found to contain malware after delivery. Only admins can view and manage messages that have been quarantined.</p>
+                       <p>For additional information, see&nbsp;<a href="https://docs.microsoft.com/microsoft-365/security/office-365-security/zero-hour-auto-purge">Zero-hour auto purge (ZAP) in Exchange Online</a>.</p>
+Score                : 6
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 133 users (100%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_safeattachments
+Description          : Safe Attachments in block mode prevents messages with detected malware attachments from being delivered. These messages are quarantined and only admins (not regular users) can review, release, or delete them. This will also automatically block future malware attachments.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>StandardRecommendedPolicy637643637771287157 - 119 users (89.47%)&nbsp;</li><li>Built-In Protection Policy - 14 users (10.53%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_safelinksforemail
+Description          : Safe Links protection for links in email messages is controlled by Safe Links policies. There is no default Safe Links policy, so to get the protection of Safe Links in email messages, you need to create one or more Safe Links policies.
+Score                : 9
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>StandardRecommendedPolicy637643637877021347 - 119 users (89.47%)&nbsp;</li><li>Built-In Protection Policy - 14 users (10.53%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_commonattachmentsfilter
+Description          : There are certain types of files that are risker to send and receive via email due to the likelihood that they contain malware (for example, executable files). To make sure these file types don't get through, enable the common attachment filter. You can use the default list of file types or customize it. The default file types are: .ace, .ani, .app, .docm, .exe, .jar, .reg, .scr, .vbe, .vbs. Messages with the specified attachments types are treated as malware and are automatically quarantined.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 133 users (100%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : McasFirewallLogUpload
+Description          : Log collectors provide visibility into cloud app usage so you can identify if there are any apps that run without official approval, or if there is anomalous behavior. Log collectors automatically upload reports and parse the firewall/ proxy traffic logs to see if there is a match with your services in the Cloud App Catalog.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T21:16:28Z], [implementationStatus, Feature in place: false.], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : McasCutomActivityPolicy
+Description          : Activity policies help you monitor specific activities carried out by users, or follow unexpectedly high rates of certain types of activities. After you set an activity detection policy, it starts to generate alerts. Alerts are only generated on activities that occur after you create the policy.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T21:16:28Z], [implementationStatus, Policy in place: false.], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : McasCloudAppNotification
+Description          : App discovery policies can notify you when new apps or abnormal usage is observed within your organization, based on traffic logs data.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T21:16:28Z], [implementationStatus, Policy in place: false.], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : McasOAuthAppNotification
+Description          : OAuth app policies can help you manage app permission and notify you when a user or an admin consents to a new Open Authorization (OAuth) app. With this information, you can investigate which permissions each app requested and which users authorized them.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T21:16:28Z], [implementationStatus, Feature in place: false.], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Data
+ControlName          : dlp_datalossprevention
+Description          : Data Loss Prevention (DLP) policies allows content in multiple locations, such as, devices, Exchange online and Teams chats to be scanned for specific types of data like social security numbers, credit card numbers, or passwords.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, ], [on, true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : exo_individualsharing
+Description          : Users should not be allowed to share the full details of their calendars with external users.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, ], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : CustomerLockBoxEnabled
+Description          : Turning on the customer lockbox feature requires that approval is obtained for datacenter operations that grants a Microsoft employee direct access to your content. Access may be needed by Microsoft support engineers if an issue arises. There's an expiration time on the request and content access is removed after the support engineer has fixed the issue.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, Feature in place: false.], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : mdo_connectionfilter
+Description          : <p>If you're a Microsoft 365 customer with mailboxes in Exchange Online or a standalone Exchange Online Protection (EOP) customer without Exchange Online mailboxes, EOP offers multiple ways of ensuring that users will receive email from trusted senders. These options include Exchange mail flow rules (also known as transport rules), Outlook Safe Senders, the IP Allow List (connection filtering), and allowed sender lists or allowed domain lists in anti-spam policies. Collectively, you can think of these options as safe sender lists. <br> <br> The available safe sender lists are described in the following list in order from most recommended to least recommended: <br> 1. Mail flow rules <br> 2. Outlook Safe Senders <br> 3. IP Allow List (connection filtering) <br> 4. Allowed sender lists or allowed domain lists (anti-spam policies)</p> <p>Without additional verification like mail flow rules, email from sources in the IP Allow List skips spam filtering and sender authentication (SPF, DKIM, DMARC) checks. Since the IP Allow List doesn't prevent malware or high confidence phishing messages from being filtered, this creates a high risk of attackers successfully delivering email to an inbox that would otherwise be filtered.</p>
+Score                : 1
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, The allowed IP addresses list in the connection filter policy is empty ], [on, true], [scoreInPercentage, 100]}
+
+ControlCategory      : Data
+ControlName          : mip_purviewlabelconsent
+Description          : 
+                               To get work done, people in your organization collaborate with others both inside and outside the organization. Data doesn't always stay in your cloud, and often roams everywhere—across  devices, apps, and services. When your data roams, you still want it to be secure in a way that meets your organization's business and compliance policies.
+                               <br/>
+                               <br/>
+                               Applying sensitivity labels to your content helps you keep your data secure by stating how sensitive certain data is in your organization. It also abstracts the data itself, letting you track the type of data without exposing sensitive data on other platforms.
+                               <br/>
+                               <br/>
+                               For example, applying the sensitivity label ‘highly confidential’ to a document that contains social security numbers and credit card numbers helps you identify the sensitivity of the document without knowing the actual data in the document.
+                               <br/>
+                               <br/>
+                               The sensitivity labels created in Microsoft Purview Information Protection can also be extended to the Microsoft Purview data map. When you apply a label on an office document and then scan it into the Microsoft Purview data map, the label will be applied to the data asset.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, The setting was not enabled.], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Data
+ControlName          : mip_sensitivitylabelspolicies
+Description          : Set up and use data classification policies on data stored in your users' Office apps (like Outlook and Word), SharePoint sites, and Office 365 groups.
+                       <br/>
+                       <br/>
+                       The policies will help categorize your most important data so you can effectively protect it from illicit access and will help make it easier to investigate discovered breaches.
+                       <br/>
+                       <br/>
+                       Creation of data classification policies will not cause a significant impact to an organization. However, ensuring long term adherence with policies can potentially be a significant training and ongoing compliance effort across an organization. Organizations should ensure that training and compliance planning is part of the classification policy creation process.
+                       <br/>
+                       <br/>
+                       <i>This information was taken from Center for Internet Security (CIS).</i>
+                           
+Score                : 2
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, Policies were published on 133 of the 133 users], [count, 133], [total, 133]…}
+
+ControlCategory      : Data
+ControlName          : mip_autosensitivitylabelspolicies
+Description          : 
+                               Create auto-labeling policies to automatically apply sensitivity labels to email messages or OneDrive and SharePoint files that contain sensitive info.
+                               <br/>
+                               This ability to apply sensitivity labels to content automatically is important because:
+                               <br/>
+                               You don't need to train your users on the appropriate way to use each of your classifications.
+                               <br/>
+                               You don't need to rely on users to classify all content correctly.
+                               <br/>
+                               Users no longer need to know about your policies—they can instead focus on their work.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, Policies were published on 0 of the 133 users], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_highconfidencespamaction
+Description          : Set the action that will be taken on high confidence spam detection.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_phisspamacation
+Description          : Set the action that will be taken on phishing detection.
+Score                : 0.04
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 0.75% of users are affected by policies that are configured securely&nbsp;</p><ul><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul><p> 99.25% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li></ul>], [count, 1], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_highconfidencephishaction
+Description          : Set the action that will be taken on high confidence phishing detection.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_bulkspamaction
+Description          : Set the action that will be taken on bulk spam detection.
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_quarantineretentionperiod
+Description          : Specifies how long to keep the message in quarantine if you selected &ldquo;Quarantine message&rdquo; as the action for a spam filtering verdict. After the time period expires, the message is deleted, and is not recoverable.
+Score                : 0.01
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 0.75% of users are affected by policies that are configured securely&nbsp;</p><ul><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul><p> 99.25% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li></ul>], [count, 1], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_allowedsenderscombined
+Description          : Never add your own accepted domains or common domains (for example, microsoft.com or office.com) to the allowed domains list. If these domains are allowed to bypass spam filtering, attackers can easily send messages that spoof these trusted domains to your organization. In addition, avoid adding specific senders that can bypass spam filtering.
+Score                : 0.02
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 0.75% of users are affected by policies that are configured securely&nbsp;</p><ul><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul><p> 99.25% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li></ul>], [count, 1], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_bulkthreshold
+Description          : Specifies the bulk complaint level (BCL) of a message that triggers the specified action for the bulk spam filtering verdict that you configure on the next page. A higher value indicates that the message is less desirable (more likely to resemble spam). While the default value is 7, 6 or lower is the recommended value.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_spamaction
+Description          : Set the action that will be taken on spam detection.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 132 users (99.25%)&nbsp;</li><li>block skogssallskapet.se - 1 users (0.75%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_autoforwardingmode
+Description          : 
+Score                : 1
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 133 users (100%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_recipientexternallimitperhour
+Description          : Configure the maximum number of external recipients that a user can email per hour. After an account is compromised, attackers commonly use the account to generate spam and phish. Configuring <a href="https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365?view=o365-worldwide#eop-outbound-spam-policy-settings">recommended values</a> can reduce the amount of spam and phishing emails, while also allowing you to be notified when these thresholds have been reached.
+Score                : 1
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 133 users (100%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_recipientinternallimitperhour
+Description          : Configure the maximum number of recipients that a user can send to per hour for internal recipients. After an account is compromised, attackers commonly use the account to generate spam and phish. Configuring <a href="https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365?view=o365-worldwide#eop-outbound-spam-policy-settings">recommended values</a> can reduce the amount of spam and phishing emails, while also allowing you to be notified when these thresholds have been reached.
+Score                : 1
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 133 users (100%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_recipientlimitperday
+Description          : Configure the maximum number of recipients that a user can send to within a day. After an account is compromised, attackers commonly use the account to generate spam and phish. Configuring <a href="https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365?view=o365-worldwide#eop-outbound-spam-policy-settings">recommended values</a> can reduce the amount of spam and phishing emails, while also allowing you to be notified when these thresholds have been reached.
+Score                : 1
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 133 users (100%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_thresholdreachedaction
+Description          : Configure action to take when any of the limits specified in the outbound anti-spam policy are reached. It is common, after an account compromise incident, for an attacker to use the account to generate spam and phish. Configuring the <a href="https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/recommended-settings-for-eop-and-office365?view=o365-worldwide#eop-outbound-spam-policy-settings">recommended values</a> can reduce the impact.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Default - 133 users (100%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : spo_idle_session_timeout
+Description          : 
+                       			Idle session sign-out lets you specify a time at which users are warned and are later signed out of Microsoft 365 after a period of browser inactivity in SharePoint and OneDrive.
+                                   <br/>
+                       			This policy is one of several you can use with SharePoint and OneDrive to balance security and user productivity and help keep your data safe, regardless  of where users access the data from, what device they're working on, and how secure their network connection is.
+                       		
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T13:04:04Z], [implementationStatus, The setting is not compliant.], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : mdo_enablemailboxintelligence
+Description          : 
+                            Turns on artificial intelligence (AI) that identifies users’ email patterns with their frequent contacts to spot potential phishing attempts.
+                           
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_mailboxintelligenceprotection
+Description          : 
+                            Enables enhanced impersonation results based on each user's individual sender map and allows you to define specific actions for impersonated messages.
+                            <br/>
+                            <br/>
+                            This setting is available only if &lsquo;<strong>Enable mailbox intelligence&rsquo;</strong> is selected.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_mailboxintelligenceprotectionaction
+Description          : 
+                            This setting specifies what to do with messages for impersonation detections from mailbox intelligence results.
+                            <br/>
+                            <br/>
+                            If a message is detected to be an impersonated user by mailbox intelligence, no action will be applied by default. We recommend moving the message to the recipients’ junk email folder and strongly recommend quarantining it.
+                            <br/>
+                            <br/>
+                            This setting is available only if the &lsquo;<strong>Ensure that intelligence for impersonation protection is enabled&rsquo;</strong> setting is properly configured.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_enabledomainstoprotect
+Description          : 
+                             Prevents specified domains from being impersonated by  the message sender's domain.
+                             <br/>
+                             <br/>
+                             When you add domains to the  &lsquo;<strong>Enable domains to protect&rsquo;</strong> list, messages from senders in those domains are subject to impersonation protection checks. The message is checked for impersonation if it’s sent to a recipient that the policy applies to.
+                             <br/>
+                             <br/>
+                             If impersonation is detected in the sender's domain, the impersonation protection actions for domains are applied to the message.
+                             <br/>
+                             <br/>
+                             By default, no sender domains are covered by impersonation protection, either in the default policy or in custom policies.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_phishthresholdlevel
+Description          : 
+                             The threshold controls the sensitivity with which machine learning models are applied to email messages to determine whether a phishing attempt has occurred.
+                             <br/>
+                             A higher value indicates greater sensitivity. The default value is 1, but 2 or 3 are the recommended values.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_similardomainssafetytips
+Description          : 
+                            This setting specifies whether to enable the safety tip that is shown to recipients for domain impersonation detections.
+                            <br/>
+                            <br/>
+                            When the &lsquo;<strong>Show domain impersonation safety tip&rsquo;</strong> is enabled, the tip &ldquo;<strong>This sender might be impersonating a domain that's associated with your organization&rdquo;</strong> is shown to recipients in messages where the sender's email domain is included in domain impersonation protection.
+                            <br/>
+                            <br/>
+                            This setting is available only if the &lsquo;<strong>Enable impersonated domain protection&rsquo;</strong> setting is configured properly.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_similaruserssafetytips
+Description          : 
+                            This setting specifies whether to enable the safety tip that is shown to recipients for user impersonation detections.
+                            <br/>
+                            <br/>
+                            When the &lsquo;<strong>Show user impersonation safety tip&rsquo;</strong> is enabled, the tip &ldquo;<strong>This sender appears to be similar to someone who previously sent you email but may not be that person&rdquo;</strong> is shown to recipients in messages where the sender's email address is included in user impersonation protection.
+                            <br/>
+                            <br/>
+                            This setting is available only if the &lsquo;<strong>Enable impersonated user protection&rsquo;</strong> setting is configured properly.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_targeteddomainprotectionaction
+Description          : 
+                            This setting specifies the action to take on detected domain impersonation messages.
+                            <br/>
+                            <br/>
+                            If a message is detected from an impersonated domain, no action is taken by default. We recommend quarantining the message.
+                            <br/>
+                            <br/>
+                            This setting is available only if &lsquo;<strong>Enable impersonated domain protection&rsquo;</strong> setting is configured properly.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_targeteduserprotectionaction
+Description          : 
+                            This setting specifies the action to take on detected user impersonation messages.
+                            <br/>
+                            <br/>
+                            If a message is detected from an impersonated user, no default action will be taken. We recommend quarantining the message.
+                            <br/>
+                            <br/>
+                            Whenever you select &lsquo;<strong>Quarantine the message&rsquo;</strong>, a &lsquo;<strong>Select quarantine policy&rsquo;</strong> box is available.
+                            <br/>
+                            Quarantine policies define who is allowed to do to quarantined messages.
+                            <br/>
+                            <br/>
+                            This setting is available only if &lsquo;<strong>Enable impersonated user protection&rsquo;</strong> setting is configured properly.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_targetedusersprotection
+Description          : 
+                             Prevents specified internal or external email addresses from being impersonated as message senders in phishing attempts.
+                             <br/>
+                             By default, impersonated user protection is disabled, and no sender email addresses are covered by impersonation protection, whether in the default policy or in custom policies.
+                             <br/>
+                             <br/>
+                             We highly recommend adding users (message senders) in key roles. Internally, protected senders might be your CEO, CFO, and other senior leaders. Externally, protected senders could include council members or your board of directors.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_unusualcharacterssafetytips
+Description          : 
+                            This setting specifies whether to enable the safety tip that is shown to recipients for unusual characters in domain and user impersonation detections.
+                            <br/>
+                            <br/>
+                            When the &lsquo;<strong>Show user impersonation unusual safety tip&rsquo;</strong> is enabled, the tip is shown to recipients in messages where the sender's name or email address contains characters that are not typically used together, such as a mix of mathematical symbols and plain text or a mix of uppercase and lowercase letters.
+                            <br/>
+                            <br/>
+                            Example tip:
+                            <br/>
+                            &lsquo;The email address MARY@CoNTᴏSO.CᴏM includes unexpected letters or numbers. We recommend you do not interact with this message.&rsquo;
+                            <br/>
+                            <br/>
+                            This setting is available only if the &lsquo;<strong>Enable impersonated user protection&rsquo;</strong> setting is configured properly.
+                           
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mip_DLP_policies_Teams
+Description          : Enabling Data Loss Prevention (DLP) policies for Microsoft Teams, blocks sensitive content when shared in teams or channels. Content to be scanned for specific types of data like social security numbers, credit card numbers, or passwords. Enabling DLP policies alerts users and administrators that specific types of data should not be exposed, helping to protect the data from accidental exposure.
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:02Z], [implementationStatus, DLP policies in Teams are: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : aad_third_party_apps
+Description          : Do not allow third party integrated applications to connect to your services. You should not allow third party integrated applications to connect to your services unless there is a very clear value and you have robust security controls in place. While there are legitimate uses, attackers can grant access from breached accounts to third party applications to exfiltrate data from your tenancy without having to maintain the breached account
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Third party applications integration is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : aad_sign_in_freq_session_timeout
+Description          : Forcing a time out for MFA will help ensure that sessions are not kept alive for an indefinite period of time, ensuring that browser sessions are not persistent will help in prevention of drive-by attacks in web browsers, this also prevents creation and saving of session cookies leaving nothing for an attacker to take.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Setting is: sign in frequency is not yet enabled in the following accounts: "block legacy authentication", "enable the multifactor timeout and persistent browser settings are set for administrators", "MFA-all users" and 3 Additional accounts. Please go to "Implementation" tab to view the required steps to enable the setting.], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : aad_admin_consent_workflow
+Description          : Without an admin consent workflow (Preview), a user in a tenant where user consent is disabled will be blocked when they try to access any app that requires permissions to access organizational data. The user sees a generic error message that says they're unauthorized to access the app and they should ask their admin for help. The admin consent workflow (Preview) gives admins a secure way to grant access to applications that require admin approval. When a user tries to access an application but is unable to provide consent, they can send a request for admin approval. The request is sent via email to admins who have been designated as reviewers. A reviewer acts on the request, and the user is notified of the action.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Admin consent workflow is: false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_password_requirement
+Description          : <p>You should require your users to use a password to unlock their mobile devices.</p> <p>Devices without this protection are vulnerable to being accessed physically by attackers who can then steal account credentials, data, or install malware on the device.</p> <p><strong>Note: Windows OS up to version 8.1 and Android OS are irrelevant and will not be accounted for to comply.</strong></p><p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This change will require users to provide a password to unlock their mobile device after the timeout period expires.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Mobile devices to have a password configuration is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_complex_passowrd_simple_passowrd_blocked
+Description          : <p>You should require your users to use a complex password to unlock their mobile devices.</p> <p>Devices without this protection are vulnerable to being accessed physically by attackers who can then steal account credentials, data, or install malware on the device.</p> <p><strong>Note: This recommendation is relevnat only for MacOS.</strong></p><p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This setting will have a moderate user impact.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Simple passowrd blocking configuration is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_never_expires_password
+Description          : <p>Ensure that users passwords on their mobile devices never expire.</p> <p>While this is not the most intuitive recommendation, research has found that when periodic password resets are enforced, passwords become weaker as users tend to pick something weaker and then use a pattern of it for rotation.</p> <p>If a user creates a strong password: long, complex and without any pragmatic words present, it should remain just as strong as it is today.</p> <p>It is Microsoft's official security position to not expire passwords periodically without a specific reason.</p> <p><strong>Note: All types of devices must be configured. Also, the default configuration is sufficient.</strong></p><p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This setting should not cause a noticeable impact to users.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Users passwords never expire configuration is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_password_reused_prohibited
+Description          : <p>Devices without this protection are vulnerable to being accessed by attackers who can then steal account credentials, data, or install malware on the device.</p> <p>Choosing unique and unused passwords every time a password changes on mobile devices lessens the likelihood that the password can be guessed by an attacker.</p> <p>You should not allow your users to reuse the same password on their mobile devices.</p> <p><strong>Note: This recommendation is relevant for both Mobile and Desktop devices.</strong></p> <p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This change will have a moderate user impact.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Reuse of mobile device password is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_complex_passowrd_alphanumeric
+Description          : <p>You should require your users to use a complex password with at least two-character sets (letters and numbers, for example) to unlock their mobile devices.</p> <p>Devices without this protection are vulnerable to being accessed physically by attackers who can then steal account credentials, data, or install malware on the device.</p> <p><strong>Note: The required value to comply is not the default value. Also, to comply, all policies should be configured as described in the implementation tab.</strong></p> <p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This setting will have a moderate user impact.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Complex passowrd (Alphanumeric) configuration is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_device_lock_after_inactivity
+Description          : You should require your users to configure their mobile devices to lock on inactivity. Attackers can steal unlocked devices and access data and account information. <p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This setting has a low impact on users.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Devices lock after a period of inactivity configuration is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_minimum_password_length
+Description          : You should require your users to use a minimum password length of at least six characters to unlock their mobile devices. Devices without this protection are vulnerable to being accessed physically by attackers who can then steal account credentials, data, or install malware on the device.<p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This change has potentially high user impact depending on the willingness and awareness of the end-user.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Minimum password length configuration is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_advanced_security_configuration
+Description          : <p>Managing mobile devices in your organization, helps provide a basic level of security to protect against attacks from these platforms. For example ensure that the device is up to date on patches or is not rooted. These configurations open those devices to vulnerabilities that are addressed in patched versions of the mobile OS.</p> <p>You should configure your mobile device management policies to require advanced security configurations. If you do not require this, users will be able to connect from devices that are vulnerable to basic exploits, leading to potential breaches of accounts and data.</p> <p><strong>Note: To comply, only mobile devices must be configured (Windows or MacOS is not required).</strong><p> <p><strong>User impact</strong>:</p> <p>The impact associated with this change is dependent upon the settings specified in the mobile device configuration profile.</p>
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Mobile device management policies with advanced security configurations requirment is: false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : intune_wipe_on_multiple_signin_failures
+Description          : Require mobile devices to wipe on multiple sign-in failures. Devices without this protection are vulnerable to being accessed physically by attackers who can then steal account credentials, data, or install malware on the device.<p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This setting has no impact, unless a user mistypes their password multiple times and causes their device to wipe. In that case, it will have a high user impact.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Wipe on multiple sign-in failures configuration is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_device_encryption
+Description          : <p>You should require your users to use encryption on their mobile devices. Unencrypted devices can be stolen and their data extracted by an attacker very easily.</p> <p><strong>Note: To comply, there should be at least one device configuration for Android with device password encryption.</strong></p> <p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This setting should have no user impact, provided the device supports the feature.</p>
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Mobile device encryption configuration is: false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : intune_conection_from_jail_broken_rooted_devices
+Description          : <p>You should not allow your users to connect with mobile devices that have been jail broken or rooted. These devices have had basic protections disabled to run software that is often malicious and could very easily lead to an account or data breach.</p> <p><strong>Note</strong>: To comply, all mobile policies should be configured as described in the "next steps".</p></p> <p><strong>User impact</strong>:</p> <p>Impact should be minimal however, in the event that a device is Jailbroken or running a developer build of a mobile Operating System it will be blocked from connecting.</p>
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, User connect from devices that are jail broken or rooted configuration is: false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : intune_AV_firewall_enabled
+Description          : <p>You should configure your mobile device management policies to require the machine (to have anti-virus and have a firewall enabled. If you do not require this, users will be able to connect from devices that are vulnerable to basic internet attacks, leading to potential breaches of accounts and data.</p> <p><strong>Note</strong>: To comply, all relevant policies should be configured as described in the "next steps".</p> <p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>Impact should be minimal however, in the event that a device is not running appropriate protection it will be blocked from connecting.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, AV and a local firewall configuration is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : intune_mobile_email_profiles_requirement
+Description          : Note - this setting is relevant for iOS/iPadOS policies only. You should configure your mobile device management policies to require the policy to manage the email profile of the user. If you do not require this, users will be able to setup and configure email accounts without the protections of the mobile device management policy, leading to potential breaches of accounts and data. <p>&nbsp;</p> <p><strong>User impact</strong>:</p> <p>This setting will have a moderate impact on users.</p>
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Mobile devices to have a managed email profile configuration is: false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : mcas_mda_enabled
+Description          : Ensure Defender for Cloud Apps is enabled to get protection for your cloud apps.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:04Z], [implementationStatus, Defender for Cloud Apps is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Identity
+ControlName          : IntegratedApps
+Description          : To reduce the risk of malicious applications attempting to trick users into granting them access to your organization's data, we recommend that you allow user consent only for applications that have been published by a verified publisher.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, You have no user consent policy in place.], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Identity
+ControlName          : PWAgePolicyNew
+Description          : Research has found that when periodic password resets are enforced, passwords become less secure. Users tend to pick a weaker password and vary it slightly for each reset. If a user creates a strong password (long, complex and without any pragmatic words present) it should remain just as strong in the future as it is today. It is Microsoft's official security position to not expire passwords periodically without a specific reason, and recommends that cloud-only tenants set the password policy to never expire.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, Your current policy is set to let passwords expire.], [scoreInPercentage, 0]}
+
+ControlCategory      : Identity
+ControlName          : SelfServicePasswordReset
+Description          : With self-service password reset in Azure Active Directory, users no longer need to engage help desk to reset passwords. This feature works well with Azure AD dynamically banned passwords, which prevents easily guessable passwords from being used.
+Score                : 1
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, You have 0 of 139 users who don't have self-service password reset enabled.], [count, 139], [total, 139]…}
+
+ControlCategory      : Identity
+ControlName          : BlockLegacyAuthentication
+Description          : Today, most compromising sign-in attempts come from legacy authentication. Older office clients such as Office 2010 don’t support modern authentication and use legacy protocols such as IMAP, SMTP, and POP3. Legacy authentication does not support multifactor authentication (MFA). Even if an MFA policy is configured in your environment, bad actors can bypass these enforcements through legacy protocols.
+Score                : 7.94
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, You have 1 of 139 users that don't have legacy authentication blocked.], [count, 138], [total, 139]…}
+
+ControlCategory      : Identity
+ControlName          : MFARegistrationV2
+Description          : Multifactor authentication (MFA) helps protect devices and data that are accessible to these users. Adding more authentication methods, such as the Microsoft Authenticator app or a phone number, increases the level of protection if one factor is compromised.
+Score                : 5.76
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, You have 50 out of 139 users that aren’t registered with MFA.], [count, 89], [total, 139]…}
+
+ControlCategory      : Identity
+ControlName          : SigninRiskPolicy
+Description          : Turning on the sign-in risk policy ensures that suspicious sign-ins are challenged for multifactor authentication (MFA).
+Score                : 6.95
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, You have 1 of 139 users that don't have the sign-in risky policy turned on.], [count, 138], [total, 139]…}
+
+ControlCategory      : Identity
+ControlName          : UserRiskPolicy
+Description          : With the user risk policy turned on, Azure Active Directory detects the probability that a user account has been compromised. As an administrator, you can configure a user risk Conditional Access policy to automatically respond to a specific user risk level. For example, you can block access to your resources or require a password change to get a user account back into a clean state.
+Score                : 6.9
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, You have 2 users out of 139 that do not have user risk policy enabled.], [count, 137], [total, 139]…}
+
+ControlCategory      : Identity
+ControlName          : OneAdmin
+Description          : <p>Having more than one global administrator helps if you are unable to fulfill the needs or obligations of your organization. It's important to have a delegate or an emergency account someone from your team can access if necessary. It also allows admins the ability to monitor each other for signs of a breach.</p> <p><strong>Note</strong>:</p> <p>According to CIS O365 Benchmark 2.0.0, the suggestion is to have between two to four global admins. Currently, the condition to comply is to have more than one global administrator - This security recommendation will be updated accordingly to CIS benchmark in the future.</p> <p><strong>Rationale</strong>:</p> <p>If there is only one global tenant administrator, he or she can perform malicious activity without the possibility of being discovered by another admin. If there are numerous global tenant administrators, the more likely it is that one of their accounts will be successfully breached by an external attacker.</p>
+Score                : 1
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, You currently have 6 global admins.], [count, 6], [scoreInPercentage, 100]}
+
+ControlCategory      : Identity
+ControlName          : RoleOverlap
+Description          : Ensure that your administrators can accomplish their work with the least amount of privilege assigned to their account. Assigning users roles like Password Administrator or Exchange Online Administrator, instead of Global Administrator, reduces the likelihood of a global administrative privileged account being breached.
+Score                : 1
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, You have 65 users with least privileged administrative roles.], [count, 65], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : spo_legacy_auth
+Description          : 
+                       			Modern authentication in Microsoft 365 enables authentication features like multifactor authentication (MFA) using smart cards, certificate-based authentication (CBA), and third-party SAML identity providers.
+                       			<br/>
+                       			Strong authentication controls, such as the use of multifactor authentication, may be circumvented if basic authentication is used by SharePoint applications. Requiring modern authentication for SharePoint applications ensures strong authentication mechanisms are used when establishing sessions between these applications, SharePoint, and connecting users.
+                       			<br/>
+                       			<i>This information was taken from Center for Internet Security (CIS).</i>
+                       		
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T13:04:04Z], [implementationStatus, The setting is not compliant.], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : exo_transportrulesallowlistdomains
+Description          : You should set Spam confidence level (SCL) in your Exchange Online mail transport rules with specific domains. Allow-listing domains in transport rules bypasses regular malware and phishing scanning, which can enable an attacker to launch attacks against your users from a safe haven domain. 
+                       	<p><strong>Note: In order to get a score for this security control, <span style="text-decoration: underline;">all</span> the active transport rule that applies to specific domains must have a Spam Confidence Level (SCL) of 0 or higher.</strong></p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, Spam confidence level (SCL) is not configured in mail transport rules with specific domain], [on, true], [scoreInPercentage, 100]}
+
+ControlCategory      : Identity
+ControlName          : AdminMFAV2
+Description          : <p>Requiring multifactor authentication (MFA) for administrative roles makes it harder for attackers to access accounts. Administrative roles have higher permissions than typical users. If any of those accounts are compromised, your entire organization is exposed. At a minimum, protect the following roles:&nbsp;</p><ul><li>Global administrator&nbsp;</li><li>Authentication administrator&nbsp;</li><li>Billing administrator&nbsp;</li><li>Conditional Access administrator&nbsp;</li><li>Exchange administrator&nbsp;</li><li>Helpdesk administrator&nbsp;</li><li>Security administrator&nbsp;</li><li>SharePoint administrator&nbsp;</li><li>User administrator&nbsp;</li></ul>
+Score                : 10
+AdditionalProperties : {[lastSynced, 2024-01-11T09:59:40Z], [implementationStatus, You have 0 out of 13 users with administrative roles that aren’t registered and protected with MFA.], [count, 13], [total, 13]…}
+
+ControlCategory      : Identity
+ControlName          : AATP_DefenderForIdentityIsNotInstalled
+Description          : Installing Microsoft Defender for Identity sensors provides you with the ability to detect advanced threats in your entire identity infrastructure. Actionable security alerts are generated through the analysis of network traffic and security events.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T17:16:09Z], [implementationStatus, ], [on, false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : exo_oauth2clientprofileenabled
+Description          : Modern authentication in Microsoft 365 enables authentication features like multifactor authentication (MFA) using smart cards, certificate-based authentication (CBA), and third-party SAML identity providers. When you enable modern authentication in Exchange Online, Outlook 2016 and Outlook 2013 use modern authentication to log in 'to Microsoft 365 mailboxes. When you disable modern authentication in Exchange Online, Outlook 2016 and Outlook 2013 use basic authentication to log in to Microsoft 365 mailboxes. <p>When users initially configure certain email clients, like Outlook 2013 and Outlook 2016, they may be required to authenticate using enhanced authentication mechanisms, such as multifactor authentication. Other Outlook clients that are available in Microsoft 365 (for example, Outlook Mobile and Outlook for Mac 2016) always use modern uthentication to log in to Microsoft 365 mailboxes
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, Modern authentication for Exchange Online is enabled], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : exo_mailtipsenabled
+Description          : MailTips assist end users with identifying strange patterns to emails they send.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, MailTips for end users are disabled.], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : mip_search_auditlog
+Description          : When audit log search in the Microsoft Purview compliance portal is enabled, user and admin activity from your organization is recorded in the audit log and retained for 90 days. However, your organization might be using a third-party security information and event management (SIEM) application to access your auditing data. In that case, a global admin can turn off audit log search in Microsoft 365.
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, Microsoft 365 audit log search is enabled], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : exo_mailboxaudit
+Description          : <p>By turning on mailbox auditing, Microsoft 365 back office teams can track logons to a mailbox as well as what actions are taken while the user is logged on. After you turn on mailbox audit logging for a mailbox, you can search the audit log for mailbox activity. Additionally, when mailbox audit logging is turned on, some actions performed by administrators, delegates, and owners are logged by default.</p> <p><strong>Rationale</strong>:</p> <p>Starting in January 2019, Microsoft is turning on mailbox audit logging by default for all organizations.</p> <p>This means that certain actions performed by mailbox owners, delegates, and admins are automatically logged, and the corresponding mailbox audit records will be available when you search for them in the mailbox audit log. When mailbox auditing on by default is turned on for the organization, the AuditEnabled property for affected mailboxes won't be changed from False to True. In other words, mailbox auditing on by default ignores the AuditEnabled property on mailboxes.</p> <p>However, only certain mailbox types support default auditing setting 'On': User Mailboxes, Shared Mailboxes, and Microsoft 365 Group Mailboxes. The remaining mailbox types require auditing to be turned on at the mailbox level: Resource Mailboxes, Public Folder Mailboxes, and DiscoverySearch Mailbox.</p> <p>Whether it is for regulatory compliance or for tracking unauthorized configuration changes in Microsoft 365, enabling mailbox auditing allows for Microsoft 365 back office teams to run security operations, forensics or general investigations on mailbox activities.</p> <p>NOTE: Without advanced auditing (E5 function) the logs are limited to 90 days.</p>
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, Mailbox auditing for all users is disabled], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : exo_storageproviderrestricted
+Description          : <p>This setting allows users to open certain external files while working in Outlook on the <br />web. If allowed, keep in mind that Microsoft doesn't control the use terms or privacy <br />policies of those third-party services.</p> <p>Ensure <em>AdditionalStorageProvidersAvailable</em> is restricted.</p> <p><strong>Rationale</strong>:</p> <p>By default additional storage providers are allowed in Office on the Web (such as Box, <br />Dropbox, Facebook, Google Drive, OneDrive Personal, etc.). This could lead to <br />information leakage and additional risk of infection from organizational non-trusted <br />storage providers. Restricting this will inherently reduce risk as it will narrow <br />opportunities for infection and data leakage.</p>
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, Additional storage providers are restricted in Outlook on the web is not configured correctly. Please follow next steps to correctly configure the control.], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : mdo_spam_notifications_only_for_admins
+Description          : In Microsoft 365 organizations with mailboxes in Exchange Online or standalone Exchange Online Protection (EOP) organizations without Exchange Online mailboxes, email messages are automatically protected against spam (junk email) by EOP. Configure Exchange Online Spam Policies to copy emails and notify someone when a sender in the organization has been blocked for sending spam emails. <p> <p><strong>Note</strong>: Audit and Remediation guidance may focus on the <strong>Default policy</strong> however, if a Custom Policy exists in the organization's tenant, then ensure the setting is set as <br />outlined in the highest priority policy listed.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>Default - 133 users (100%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_safeattachmentpolicy
+Description          : <p>The Safe Attachments policy helps protect users from malware in email attachments by <br />scanning attachments for viruses, malware, and other malicious content. When an email <br />attachment is received by a user, Safe Attachments will scan the attachment in a secure <br />environment and provide a verdict on whether the attachment is safe or not.</p> <p><strong>Rationale</strong>:<br />Enabling Safe Attachments policy helps protect against malware threats in email <br />attachments by analyzing suspicious attachments in a secure, cloud-based environment <br />before they are delivered to the user's inbox. This provides an additional layer of <br />security and can prevent new or unseen types of malware from infiltrating the <br />organization's network.</p>
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured securely&nbsp;</p><ul><li>StandardRecommendedPolicy637643637771287157 - 119 users (89.47%)&nbsp;</li><li>Built-In Protection Policy - 14 users (10.53%)&nbsp;</li></ul>], [count, 133], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_safelinksforOfficeApps
+Description          : Enabling Safe Links policy for Office applications allows URL's that exist inside of Office documents and email applications opened by Office, Office Online and Office mobile to be processed against Defender for Office time-of-click verification and rewritten if required.
+Score                : 2.68
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 89.47% of users are affected by policies that are configured securely&nbsp;</p><ul><li>StandardRecommendedPolicy637643637877021347 - 119 users (89.47%)&nbsp;</li></ul><p> 10.53% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Built-In Protection Policy - 14 users (10.53%)&nbsp;</li></ul>], [count, 119], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_antiphishingpolicies
+Description          : By default, Office 365 includes built-in features that help protect users from phishing attacks. Set up anti-phishing polices to increase this protection, for example by refining settings to better detect and prevent impersonation and spoofing attacks. The default policy applies to all users within the organization, and is a single view to fine-tune anti-phishing protection. Custom policies can be created and configured for specific users, groups or domains within the organization and will take precedence over the default policy for the scoped users. <p> Rationale: Protects users from phishing attacks (like impersonation and spoofing), and uses safety tips to warn users about potentially harmful messages.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Office365 AntiPhish Default - 132 users (99.25%)&nbsp;</li><li>phishing rule 1 - 1 users (0.75%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : mdo_blockmailforward
+Description          : <p>Exchange Online offers several methods of managing the flow of email messages. <br />These are Remote domain, Transport Rules, and Anti-spam outbound policies. These <br />methods work together to provide comprehensive coverage for potential automatic <br />forwarding channels:</p> <ul> <li>Outlook forwarding using inbox rules</li> <li>Outlook forwarding configured using OOF rule</li> <li>OWA forwarding setting (ForwardingSmtpAddress)</li> <li>Forwarding set by the admin using EAC (ForwardingAddress)</li> <li>Forwarding using Power Automate / Flow</li> </ul> <p><strong>NOTE:</strong></p> <ul> <li>In this control, remediation is carried out in two stages - Step 1 is manual and will not be monitored automatically by secure score, whereas Step 2 is monitored automatically.</li> <li>Any exclusions should be implemented based on organizational policy.</li> </ul> <p><strong>Rationale:</strong><br />Attackers often create these rules to exfiltrate data from your tenancy, this could be <br />accomplished via access to an end-user account or otherwise. An insider could also use <br />one of these methods as an secondary channel to exfiltrate sensitive data.</p>
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, <p> 100% of users are affected by policies that are configured less securely than is recommended&nbsp;</p><ul><li>Default - 133 users (100%)&nbsp;</li></ul>], [count, 0], [total, 133]…}
+
+ControlCategory      : Apps
+ControlName          : aad_admin_accounts_separate_unassigned_cloud_only
+Description          : Administrative accounts are special privileged accounts that could have varying levels of access to data, users, and settings. Regular user accounts should never be utilized for Administrative tasks and care should be taken, in the case of a hybrid environment, to keep Administrative accounts separated from on-prem accounts. Administrative accounts should not have applications assigned so that they have no access to potentially vulnerable services (EX. email, Teams, SharePoint, etc.) and only access to perform tasks as needed for Administrative purposes.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Administrator accounts are separate, unassigned and cloud-only account: false], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : aad_password_protection
+Description          : Enable Azure Active Directory Password Protection to Active Directory to protect against the use of common passwords.<P> Note: This recommendation applies to Hybrid deployments only, and will have no impact unless working with on-premises Active Directory.
+Score                : 6
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, Azure Active Directory Password Protection is enabled], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : aad_linkedin_connection_disables
+Description          : LinkedIn account connections allow users to connect their Microsoft work or school account with LinkedIn. Once a user connects their accounts, information and highlights from LinkedIn become available in some Microsoft apps and services. Disabling LinkedIn integration can prevent potential phishing attacks and risk scenarios where an external party could accidentally disclose sensitive information.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, LinkedIn account connections is - Not disabled], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : spo_external_sharing_managed
+Description          : Control sharing of documents to external domains by either blocking domains or only allowing sharing with specific named domains. Note - this control's mandatory compliance requirement is to set allow list domains.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:02Z], [implementationStatus, Document sharing is being controlled by domains setting is disabled], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : spo_block_onedrive_sync_unmanaged_devices
+Description          : Microsoft OneDrive allows users to sign in their cloud tenant account, and begin syncing select folders or the entire contents of OneDrive to a local computer. By default this includes any computer with OneDrive already installed, whether or not it is Azure Domain Joined or Active Directory Domain joined. Unmanaged devices pose a risk, since their security cannot be verified through existing security policies, brokers or endpoint protection. Allowing users to sync data to these devices takes that data out of the control of the organization. This increases the risk of the data either being intentionally or accidentally leaked. Note: This setting is only applicable to Active Directory domains when operating in a hybrid configuration. It does not apply to Azure AD domains. If you have devices which are only Azure AD joined, consider using a Conditional Access Policy instead.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:02Z], [implementationStatus, Blocking OneDrive for Business sync from unmanaged devices is: disabled], [scoreInPercentage, 0]}
+
+ControlCategory      : Device
+ControlName          : scid_2061
+Description          : Microsoft Defender SmartScreen provides warning messages to help protect your employees from potential phishing scams and malicious software.<br/><br/>This security control is only applicable for machines with Windows 10, version 1703 or later.
+Score                : 9
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2060
+Description          : SmartScreen helps protect PCs by warning users before running potentially malicious programs downloaded from the Internet.<br/><br/>This security control is only applicable for machines with Windows 10, version 1703 or later.<br>
+Score                : 9
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2070
+Description          : Microsoft Defender Firewall is designed to keep hackers and malicious software from gaining access to your device through a network or the Internet.<br/><br/>This security control is only assessed for machines with Windows 10, version 1709 or later.<br>If the firewall is turned off all traffic will be able to access the system and an attacker may be more easily able to remotely exploit a weakness in a network service.
+Score                : 10
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2072
+Description          : Microsoft Defender Firewall is designed to keep hackers and malicious software from gaining access to your device through a network or the Internet. Turn on to have Microsoft Defender Firewall use the settings for the Private Network profile to filter network traffic.<br/><br/>This security control is only assessed for machines with Windows 10, version 1709 or later.<br>If the firewall is turned off all traffic will be able to access the system and an attacker may be more easily able to remotely exploit a weakness in a network service.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2508
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#use-advanced-protection-against-ransomware" target="blank_">ASR rule</a> scans executable files entering the system to determine whether they're trustworthy.<br/><br/>This security control is only applicable for machines with Windows 10, version 1803 or later.<br>This provides an extra layer of protection against files that closely resemble ransomware, by blocking them from running, unless they're in a trusted list or exclusion list.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2013
+Description          : Enabling Potentially Unwanted Application (PUA) protection will block and automatically quarantine potentially unwanted applications. PUA protection blocking takes effect on endpoint clients after the next signature update or computer restart. <br/>This feature is available for machines on Windows 10, version 1607 or later.<br>Not having PUA enabled leaves your machines vulnerable to unwanted applications with potentially malicious behavior.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2051
+Description          : You and your security department can define your corporate boundaries by explicitly adding trusted domains and by customizing the Microsoft Defender Application Guard experience to meet and enforce your needs on employee devices. Enterprise-managed mode also automatically redirects any browser requests to add non-enterprise domain(s) in the container.<br>If Application Guard is disabled, employees browsing untrusted sites with malicious behavior expose the host PC to attackers gaining acces to sensitive data such as enterprise credentials.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2020
+Description          : This status indicates that not all system-level Exploit Guard protection settings are enabled.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Not enabling all Exploit Guard protection settings could potentially leave your vulnerable to malicious exploit attacks.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2071
+Description          : Determines whether Microsoft Defender Firewall uses the settings for this profile to filter network traffic for the Domain Network profile.<br/><br/>This security control is only assessed for machines with Windows 10, version 1709 or later.<br>If the firewall is turned off all traffic will be able to access the system and an attacker may be more easily able to remotely exploit a weakness in a network service.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2003
+Description          : Tamper Protection essentially locks Microsoft Defender for Endpoint and prevents your security settings from being changed through apps and methods such as editing registry values, changing settings through PowerShell cmdlets and editing or removing security settings through group policies. <br>Without enabling Tamper Protection, malicious apps can potentially change important Microsoft Defender for Endpoint settings, for example disable virus and threat protection, turn off real-time protection or disable cloud-delivered protection.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2505
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-execution-of-potentially-obfuscated-scripts" target="blank_">ASR rule</a> prevents scripts that appear to be obfuscated from running. It uses the AntiMalwareScanInterface (AMSI) to determine if a script is potentially obfuscated, and then blocks such a script, or blocks scripts when an attempt is made to access them.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Malware and other threats can attempt to obfuscate or hide their malicious code in script files.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2512
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-communication-application-from-creating-child-processes" target="blank_">ASR rule</a> prevents Outlook from creating child processes, while still allowing legitimate Outlook functions.<br/><br/>This security control is only applicable for machines with Windows 10, version 1903 or later.<br>Provides protection against social engineering attacks and prevents exploit code from abusing a vulnerability in Outlook, by blocking the launch of additional payload. It also protects against Outlook rules and forms exploits that attackers can use when a user's credentials are compromised.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2000
+Description          : Determines whether the Microsoft Defender for Endpoint sensor embedded in Windows collect and process behavioral signals from the operating system and sends this sensor data to your private, isolated, cloud instance of Microsoft Defender for Endpoint<br>The Microsoft Defender for Endpoint service will not be able to determine the security state of machines that are not sending sensor data.
+Score                : 10
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2073
+Description          : Microsoft Defender Firewall is designed to keep hackers and malicious software from gaining access to your device through a network or the Internet.<br/><br/>This security control is only assessed for machines with Windows 10, version 1709 or later.<br>If the firewall is turned off all traffic will be able to access the system and an attacker may be more easily able to remotely exploit a weakness in a network service.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2510
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-process-creations-originating-from-psexec-and-wmi-commands" target="blank_">ASR rule</a> blocks processes through PsExec and WMI commands from running.<br/><br/>Warning: This rule is incompatible with management through System Center Configuration Manager because this rule blocks WMI commands the SCCM client uses to function correctly.<br/><br/>This security control is only applicable for machines with Windows 10, version 1803 or later.<br>Attackers often use remote code execution for spreading malware attacks.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2513
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-adobe-reader-from-creating-child-processes" target="blank_">ASR rule</a> prevents Adobe Reader from creating additional child processes.<br/><br/>This security control is only applicable for machines with Windows 10, version 1903 or later.<br>Through social engineering or exploits, malware can download and launch additional payloads and break out of Adobe Reader. 
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2500
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-content-from-email-client-and-webmail" target="blank_">ASR rule</a> blocks executable and script files (such as .exe, .dll, .scr, .ps, .vbs, .js) from launching from email in Microsoft Outlook or Outlook.com and other popular webmail providers.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Email attachments are the most common method that attackers use for transmitting malicious software and viruses into computers and organizations.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2021
+Description          : This status indicated that controlled folder access is disabled. Controlled folder access helps protect files in key system folders from changes made by malicious and suspicious apps, including file-encrypting ransomware malware. Requires Microsoft Defender Antivirus Real-time protection.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Not enabling controlled folder access leaves you exposed to various attack vectors. Audit mode allows you to see audit events in the Microsoft Defender for Endpoint Machine timeline however it does not block suspicious applications. Consider enabling Controlled Folder Access for better protection.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2001
+Description          : The Microsoft Defender for Endpoint service relies on sensor data collection to determine the security state of a machine.<br>The Microsoft Defender for Endpoint service will not be able to determine the security state of machines that are not reporting sensor data properly.
+Score                : 10
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2002
+Description          : This status indicates that there's limited communication between the machine and the Microsoft Defender for Endpoint service.<br>Limited communication between the machine and the Microsoft Defender for Endpoint service can lead to the service not being able to determine the security state of machine.
+Score                : 10
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2511
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-untrusted-and-unsigned-processes-that-run-from-usb" target="blank_">ASR rule</a> allows admins to prevent unsigned or untrusted executable and script files (such as .exe, .dll, .scr, .ps, .vbs, .js) from running from USB removable drives, including SD cards.<br/><br/>This security control is only applicable for machines with Windows 10, version 1803 or later.<br>Attackers often use removable devices for executing malicious code, even without the knowledge of the device owner.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2504
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-javascript-or-vbscript-from-launching-downloaded-executable-content" target="blank_">ASR rule</a> prevents JavaScript and VBScript from being allowed to launch apps.<br/><br/>Note: This isn't a common line-of-business use, but line-of-business applications sometimes use scripts to download and launch installers.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Malware written in JavaScript or VBS often acts as a downloader to fetch and launch additional native payload from the Internet.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2501
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-all-office-applications-from-creating-child-processes" target="blank_">ASR rule</a> blocks Office apps from creating child processes. This includes Word, Excel, PowerPoint, OneNote, and Access.<br/><br/>Note: Some legitimate line-of-business applications might also use behaviors like this, including spawning a command prompt or using PowerShell to configure registry settings.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Creating child processes is a typical malware behaviour that can be exploited in various ways, especially for attacks that abuse Office as a vector, using VBA macros and exploit code to download and attempt to run additional malicious payload.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2514
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href=""https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-persistence-through-wmi-event-subscription"" target=""blank_"">ASR rule</a> allows admins to have more control over WMI repository persistence.<br/><br/>This security control is only applicable for machines with Windows 10, version 1903 or later. Fileless threats employ various tactics to stay hidden, to avoid being seen in the file system, and to gain periodic execution control. Some threats can abuse the WMI repository and event model to stay hidden.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2093
+Description          : BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers.<br/><br/>This security control is only assessed for machines with Windows 10, version 1803 or later.<br>Drives that aren't compatible with BitLocker remain not encrypted. Drives that aren't encrypted are exposed to unauthorized access to user data and to data tampering while the system was offline.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2004
+Description          : Enable EDR in block mode to block post breach malicious behavior on the device through behavior blocking and containment capabilities
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2503
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-injecting-code-into-other-processes" target="blank_">ASR rule</a> blocks code injection attempts from Office apps into other processes. There are no known legitimate business purposes for using code injection<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Attackers might attempt to use Office apps to migrate malicious code into other processes through code injection, so the code can masquerade as a clean process and hide the activity from antivirus scanning engines.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2091
+Description          : BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers.<br/><br/>This security control is only assessed for machines with Windows 10, version 1803 or later.<br>Drives that aren't encrypted are exposed to unauthorized access to user data and to data tampering while the system is offline.
+Score                : 9
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2012
+Description          : This status indicates that Microsoft Defender Antivirus real-time protection is disabled.<br/>This feature is available for machines on Windows 10, version 1607 or later.<br>Not having real-time protection enabled will cause important AV functionalities to not work.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2016
+Description          : Indicates that Microsoft Defender Antivirus cloud-delivered protection is not enabled. Cloud-delivered protection service provides very important protection against malware on your endpoints and across your network.<br>Not having cloud-delivered protection enabled leaves your endpoint and your network vulnerable to malware.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_91
+Description          : Determines whether Microsoft Defender Antivirus monitors file processes, file and registry changes, and other events on your endpoints for suspicious and known malicious activity.<br>Disabling behavior monitoring will reduce your ability to detect suspicious activity that could indicate a breach.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2502
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-office-applications-from-creating-executable-content" target="blank_">ASR rule</a> prevents Office apps, including Word, Excel, and PowerPoint, from creating executable content.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Creating executable content is a typical behavior where malware uses Office as a vector to break out of Office and save malicious code components to disk, where they persist and survive a computer reboot.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2507
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-executable-files-from-running-unless-they-meet-a-prevalence-age-or-trusted-list-criterion" target="blank_">ASR rule</a> blocks executable files (such as .exe, .dll, .scr) from launching unless they either meet prevalence or age criteria, or they're in a trusted list or exclusion list.<br/><br/>This security control is only applicable for machines with Windows 10, version 1803 or later.<br>Allowing executables that have not yet established sufficient trust and validation to be executed, increases your exposure to potentially malicious applications.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2011
+Description          : This status indicates that Microsoft Defender Antivirus definitions are not up to date.<br>Not having the latest antivirus definitions could potentially expose you to recently discovered viruses.
+Score                : 9
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2014
+Description          : Indicates that Microsoft Defender Antivirus is not properly configured to report its health state.<br>Status reports that are not properly sent prevent you from being able to monitor your antivirus health state.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2515
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href=""https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-abuse-of-exploited-vulnerable-signed-drivers"" target=""blank_"">ASR rule</a> prevents an application from writing a vulnerable signed driver to disk.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later, and Windows Server 2019.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2010
+Description          : Determines whether Microsoft Defender Antivirus is configured to run and scan for malware and other potentially unwanted software.<br/>This feature is available for machines on Windows 10, version 1607 or later.<br>Not having a current, updated antivirus product scanning each computer for malicious file activity exposes the organization to malware or other potentially unwanted software.
+Score                : 10
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2506
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-win32-api-calls-from-office-macros" target="blank_">ASR rule</a> prevents using Win32 APIs in VBA macros.<br/><br/>Note: Most organizations don't use this functionality, but might still rely on using other macro capabilities.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Malicious code can abuse the ability to execute routines in the Win 32 dynamic link library from macros.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2090
+Description          : BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers.<br/><br/>This security control is only assessed for machines with Windows 10, version 1803 or later.<br>Drives that aren't encrypted are exposed to unauthorized access to user data and to data tampering while the system is offline.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_15
+Description          : Controls whether the Office automatic updates are enabled or disabled for all Office products installed by using Click-to-Run. This policy has no effect on Office products installed via Windows Installer.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_16
+Description          : Controls whether to hide the user interface (UI) options to enable or disable Office automatic updates from users.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_19
+Description          : Chrome allows for processes started while the browser is open to reMain running once the browser has been closed. It also allows for background apps and the current browsing session to reMain active after the browser has been closed. Disabling this feature will stop all processes and background applications when the browser window is closed.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_22
+Description          : Chrome will memorize passwords and automatically provide them when a user logs into a site. By disabling this feature the user will be prompted to enter their password each time they visit a website.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_23
+Description          : Chrome allows cookies to be set by web page elements that are not from the domain in the user's address bar. Enabling this feature prevents third party cookies from being set.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_24
+Description          : Determines the method used by the server and client for authentication prior to a remote desktop connection being established.<br>If the authentication level isn't secure enough, an attacker could gain remote access to the machine
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_25
+Description          : Forces LSA to run as Protected Process Light (PPL).<br>If LSA isn't running as a protected process, attackers could easily abuse the low process integrity for attacks (such as Pass-the-Hash).
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_26
+Description          : Determines whether an application searches for DLLs in the system path before searching the current working directory .<br>An unauthorized DLL inserted by an attacker into an applications working directory could allow malicious code to be run on the system.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_27
+Description          : Determines the behavior of the elevation prompt for standard users.<br>Denying elevation requests from standard user accounts requires tasks that need elevation to be initiated by accounts with administrative privileges. This prevents privileged account credentials from being cached with standard user profile information to help mitigate credential theft.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_28
+Description          : Determines the amount of inactivity time (in seconds) of a logon session, beyond which the screen saver will run, locking the session.<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_29
+Description          : Determines whether the user needs to provide both the administrator username and password to elevate a running application, or if the system displays a list of administrator accounts to choose from.<br>Enumeration of administrator accounts when elevating can provide part of the logon information to an unauthorized user, making attacks easier.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_30
+Description          : Determines whether insecure guest logons are used by file servers to allow unauthenticated access to shared folders.<br>Insecure guest logons allow unauthenticated access to shared folders and retreive sensitive data, as well as place malicious files. Shared resources on a system must require authentication to establish proper access.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_32
+Description          : Determines the minimum password length
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_33
+Description          : Determines the number of unique new passwords that are required before an old password can be reused in association with a user account.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_34
+Description          : Determines the period of time (in days) that a password can be used before the system requires the user to change it.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_35
+Description          : Determines the number of days that you must use a password before you can change it.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_36
+Description          : When this policy setting is enabled, a secure channel can only be established with Domain controllers that are capable of encrypting secure channel data with a strong (128-bit) session key.<br>Session keys that are used to establish secure channel communications between Domain controllers and member computers are much stronger in Windows 2000 than they were in previous Microsoft operating systems. Whenever possible, you should take advantage of these stronger session keys to help protect secure channel communications from attacks that attempt to hijack network sessions and eavesdropping.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_37
+Description          : Determines whether all secure channel traffic that is initiated by the domain member must be signed or encrypted.<br>When a computer joins a domain, a computer account is created. After it joins the domain, the computer uses the password for that account to create a secure channel with the Domain controller for its domain every time that it restarts. Requests that are sent on the secure channel are authenticated and sensitive information such as passwords are encrypted but the channel is not integrity-checked, and not all information is encrypted.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_38
+Description          : Determines whether a domain member should attempt to negotiate encryption for all secure channel traffic that it initiates.<br>When a computer joins a domain, a computer account is created. After it joins the domain, the computer uses the password for that account to create a secure channel with the domain controller for its domain every time that it restarts. Requests that are sent on the secure channel are authenticated and sensitive information such as passwords are encrypted but the channel is not integrity-checked, and not all information is encrypted.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_39
+Description          : Determines whether a domain member should attempt to negotiate whether all secure channel traffic that it initiates must be digitally signed. Digital signatures protect the traffic from being modified by anyone who captures the data as it traverses the network.<br>When a computer joins a domain, a computer account is created. After it joins the domain, the computer uses the password for that account to create a secure channel with the domain controller for its domain every time that it restarts. Requests that are sent on the secure channel are authenticated and sensitive information such as passwords are encrypted but the channel is not integrity-checked, and not all information is encrypted.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_40
+Description          : Determines whether automatic password changes are enforced on computer accounts.<br>Disabling automatic password changes can make the system more vulnerable to malicious access. Frequent password changes can be a significant safeguard for your system.
+Score                : 2
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_41
+Description          : Determines the length of time that must pass before a locked account is unlocked and a user can try to log on again. If configured to 0, accounts will remain locked out until an administrator manually unlocks them.<br/><br/>This security control is only assessed for machines with Windows 10, version 1709 or later.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_42
+Description          : Determines the length of time before the 'Account lockout threshold' counter resets to zero after a failed logon attempt. This reset time must be less than or equal to the value of the 'Account lockout duration' setting.<br/><br/>This security control is only assessed for machines with Windows 10, version 1709 or later.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_43
+Description          : Determines whether Microsoft Defender Firewall with Advanced Security display notifications to the user when a program is blocked from receiving inbound connections.<br>Firewall notifications can be complex and may confuse the end users, who would not be able to address the alert.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_44
+Description          : Determines the number of failed logon attempts before the account is locked. The number of failed logon attempts should be reasonably small to minimize the possibility of a successful password attack, while still allowing for honest errors made during a legitimate user logon.<br/><br/>This security control is only assessed for machines with Windows 10, version 1709 or later.
+Score                : 6
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_45
+Description          : Determines whether to require user authentication for remote connections to the RD Session Host server by using Network Level Authentication.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_46
+Description          : Determines whether Microsoft Defender Firewall with Advanced Security display notifications to the user when a program is blocked from receiving inbound connections.<br>Firewall notifications can be complex and may confuse the end users, who would not be able to address the alert.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_49
+Description          : Determines whether Microsoft Defender Firewall with Advanced Security display notifications to the user when a program is blocked from receiving inbound connections.<br>Firewall notifications can be complex and may confuse the end users, who would not be able to address the alert.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_51
+Description          : Controls whether local administrators are allowed to create connection security rules that apply together with connection security rules configured by Group Policy.<br>Users with administrative privileges might create firewall rules that expose the system to remote attack. Local connection rules should not be merged with Group Policy settings on a public network to prevent Group Policy settings from being changed and weakened.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_52
+Description          : With User Account Control enabled, filtering the privileged token for built-in administrator accounts will prevent the elevated privileges of these accounts from being used over the network.<br/>This recommendation is not applicable for organizations which use local password management solution (like LAPS) to protect local accounts for remote administration and support.<br>A compromised local administrator account can provide means for an attacker to move laterally between domain systems.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_53
+Description          : Disabling SMBv1 support may prevent access to file or print sharing resources with systems or devices that only support SMBv1.<br>SMBv1 is a legacy protocol that uses the MD5 algorithm as part of SMB. MD5 is known to be vulnerable to a number of attacks such as collision and preimage attacks as well as not being FIPS compliant.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_54
+Description          : Disabling SMBv1 support may prevent access to file or print sharing resources with systems or devices that only support SMBv1.<br>SMBv1 is a legacy protocol that uses the MD5 algorithm as part of SMB. MD5 is known to be vulnerable to a number of attacks such as collision and preimage attacks as well as not being FIPS compliant.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_55
+Description          : Determines whether anonymous network users have the same rights and permissions as the built-in 'Everyone' group..<br/><br/>This security control is only assessed for machines on Windows 10, version 1709 or later.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_57
+Description          : When the WDigest Authentication protocol is enabled, plain text passwords are stored in the Local Security Authority Subsystem Service (LSASS) exposing them to theft.<br>Disabling this setting will prevent WDigest from storing credentials in memory.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_58
+Description          : Determines whether a user can install and configure the Network Bridge. The Network Bridge allows users to create a layer 2 MAC bridge, enabling them to connect two or more network segments together.<br>A Network Bridge can connect two or more network segments, allowing unauthorized access or exposure of sensitive data in another network segment.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_59
+Description          : Determines whether to require domain users to elevate when setting a network's location.<br>Selecting an incorrect network location may allow greater exposure of a system
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_60
+Description          : Determines whether an existing internet connection, such as through wireless, can be shared and used by other systems essentially creating a mobile hotspot.<br>This exposes the system sharing the connection to others with potentially malicious purpose.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_61
+Description          : Determines the minimum PIN length for authentication without sending a password to a network where it could be compromised.<br>BitLocker requires the use of the function keys [F1-F10] for PIN entry since the PIN is entered in the pre-OS environment before localization support is available. This limits each PIN digit to one of ten possibilities. The TPM has an anti-hammering feature that includes a mechanism to exponentially increase the delay for PIN retry attempts; however, using a PIN that is short in length improves an attacker's chances of guessing the correct PIN.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_62
+Description          : Determines whether BitLocker requires additional authentication each time the computer starts, and whether you are using BitLocker with or without a Trusted Platform Module (TPM).<br>TPM without use of a PIN will only validate early boot components and does not require a user to enter any additional authentication information. If a computer is lost or stolen in this configuration, BitLocker will not provide any additional measure of protection beyond what is provided by native Windows authentication unless the early boot components are tampered with or the encrypted drive is removed from the machine.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_63
+Description          : Determines whether unsolicited offers of help to this computer via Remote Assistance are allowed. Help desk and support personnel will not be able to proactively offer assistance, although they can still respond to user assistance requests.<br>A user might be tricked and accept an unsolicited Remote Assistance offer from a malicious user.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_64
+Description          : Determines whether anonymous access is restricted to only shares and pipes that are named.<br>Null sessions are a weakness that can be exploited through shares (including the default shares) on computers in your environment in order to gain unauthorized system access. Network shares can be accessed by any network user. This could lead to the exposure or corruption of sensitive data. This setting configures Windows to restrict anonymous access to only those shares and pipes listed in Network Access: named pipes that can be accessed anonymously.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_65
+Description          : Controls whether or not a LAN Manager hash of the password is stored in the SAM the next time the password is changed.<br>The LAN Manager hash uses a weak encryption algorithm and there are several tools available that use this hash to retrieve account passwords.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_66
+Description          : Determines whether Windows Installer always elevates privileges when installing applications.<br>Standard user accounts must not be granted elevated privileges. Enabling Windows Installer to elevate privileges when installing applications can allow malicious persons and applications to gain full control of a system.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_67
+Description          : Determines whether autoplay for non-volume devices (such as Media Transfer Protocol (MTP) devices) is enabled or disabled.<br>An attacker could use this feature to launch a program to damage a client computer or data on the computer.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_68
+Description          : Controls the ability of anonymous users to enumerate the accounts in the Security Accounts Manager (SAM). If you enable this policy setting, users with anonymous connections will not be able to enumerate domain account user names on the systems in your environment.<br>Anonymous enumeration of SAM accounts allows anonymous log on users (null session connections) to list all accounts names, thus providing a list of potential points to attack the system.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_69
+Description          : Determines whether Autoplay is enabled on the device. Autoplay starts to read from a drive as soon as you insert media in the drive, which causes the setup file for programs or audio media to start immediately<br>An attacker could use this feature to launch a malicious program to damage a client computer or data on the computer.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_70
+Description          : Determines whether Autorun commands are allowed to execute. Autorun commands are generally stored in autorun.inf files. They often launch the installation program or other routines.<br>Allowing autorun commands to execute may introduce malicious code to a system without user intervention or awareness. Configuring this setting prevents autorun commands from executing.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_71
+Description          : Determines whether local accounts that are not password protected can be used to log on from locations other than the physical computer console. By enabling this configuration, local accounts that have blank passwords will not be able to log on to the network from remote client computers. Such accounts will only be able to log on at the keyboard of the computer.<br>An account without a password can allow unauthorized access to a system as only the username would be required. Password policies should prevent accounts with blank passwords from existing on a system. However, if a local account with a blank password did exist, enabling this setting will prevent network access, limiting the account to local console logon only.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_72
+Description          : Determines which challenge/response authentication protocol is used for network logons. This choice affects the level of authentication protocol used by clients, the level of session security negotiated, and the level of authentication accepted by servers.<br>Using older/weaker authentication levels (LM & NTLM) make it potentially possible for attackers to sniff that traffic to more easily reproduce the user's password.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_73
+Description          : Determines whether the Windows Remote Management (WinRM) client uses Basic authentication.<br>Basic authentication uses plain text passwords that could be used by an attacker to compromise a system.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_74
+Description          : Determines whether the Windows Remote Management (WinRM) service accepts Basic authentication.<br>Basic authentication uses plain text passwords that could be used by an attacker to compromise a system.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_80
+Description          : Determines whether Flash can be used in office documents.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_81
+Description          : Determines whether IPv6 source routing is enabled.<br>Configuring the system to disable IP source routing protects against spoofing.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_82
+Description          : Determines whether IP source routing is enabled.<br>Configuring the system to disable IP source routing protects against spoofing.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_83
+Description          : Determines whether Data Execution Prevention can be turned off for File Explorer.<br>DEP provides additional protection by performing checks on memory to help prevent malicious code from running.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_84
+Description          : Enables management of password for local administrator account in AD.<br>Due to the difficulty in managing local Administrator passwords, many organizations choose to use the same password on all endpoints during deployment. This poses a serious attack surface security risk because if an attacker manages to compromise one system and learn the password to its local Administrator account, then they can leverage that account to instantly gain access to all other computers that also use that password for their local Administrator account.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_87
+Description          : Remote assistance allows another user to view or take control of the local session of a user. Solicited assistance is help that is specifically requested by the local user.<br>This may allow unauthorized parties access to the resources on the computer
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_88
+Description          : Determines whether anonymous logon users (null session connections) are allowed to list all account names and enumerate all shared resources<br>Allowing this can provide a map of potential points to attack the system.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_89
+Description          : This setting controls whether or not to scan for malicious software and unwanted software in the contents of removable drives, such as USB flash drives, when running a full scan.<br>This security control is only applicable for machines with Windows 10, version 1709 or later.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_90
+Description          : Determines whether Microsoft Defender Antivirus analyze the mail bodies and attachments and scans them for malicious content.<br>Not scanning incoming emails and attachments could potentially enable attackers to deliver malicious content and attchments into the organization
+Score                : 9
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_92
+Description          : Determines whether Microsoft Defender Antivirus scans all downloaded files and attachments for malicious code.<br>Not scanning downloaded files and attachments leaves devices vulnerable to malicious code penetration into the organization.
+Score                : 10
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_93
+Description          : Determines whether Credential Manager saves passwords or credentials locally for later use when it gains domain authentication.<br>Locally cached passwords or credentials can be accessed by malicious code or unauthorized users.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_94
+Description          : Determines whether the SMB redirector will send unencrypted (plain text) passwords when authenticating to third-party SMB servers that do not support password encryption.<br>Sending plain text passwords across the network, when authenticating to an SMB server, reduces the overall security of the environment and introduces a significant security risk. Check with the vendor of the SMB server to see if there is a way to support encrypted password authentication.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_95
+Description          : Determines whether packet signing is required by the SMB client component. If this is enabled, the SMB client will only communicate with an SMB server that performs SMB packet signing.<br>Unsigned traffic exposes you to man-in-the-middle attacks. Attackers can potentially intercept and modify unsigned SMB packets and then modify the traffic and forward it so that the server might perform undesirable actions. Alternatively, the attacker could pose as the server or client after legitimate authentication and gain unauthorized access to data.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_96
+Description          : <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/network-protection" target="_blank">Network protection</a> helps reduce the attack surface of your devices from Internet-based events. It prevents employees from using any application to access dangerous domains that may host phishing scams, exploits, and other malicious content on the Internet.<br/>It expands the scope of Windows Defender SmartScreen to block all outbound HTTP(s) traffic that attempts to connect to low-reputation sources (based on the domain or hostname)<br/><br/>This security control is only applicable for machines with Windows 10, version 1709 or later.<br>Not enabling Network Protection in block mode exposes your users and machines to phishing scams, as well as to internet delivered exploits and malicious content.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_2509
+Description          : Attack Surface Reduction (ASR) rules are the most effective method for blocking the most common attack techniques being used in cyber attacks and malicious software.<br/>This <a href="https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction#block-credential-stealing-from-the-windows-local-security-authority-subsystem-lsassexe" target="blank_">ASR rule</a> locks down LSASS.<br/><br/>This security control is only applicable for machines with Windows 10, version 1803 or later.<br>Attackers can use tools like Mimikatz to scrape cleartext passwords and NTLM hashes from LSASS.
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 1/1 exposed devices], [count, 1], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_3001
+Description          : Determines the existence on the machine of one or more services, which are configured with a path to executable that contains spaces and also isn't surrounded by quotation marks.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_3002
+Description          : Determines the existence on the machine of one or more services, which are configured with a path to executable that is stored in an uncommon/unprotected folder location.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_3003
+Description          : Determines the existence on the machine of one or more services, which are configured to run with account that stores its password in reversible encryption in the registry.
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_3010
+Description          : Determines whether the built-in Administrator account is disabled
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Device
+ControlName          : scid_3011
+Description          : Determines whether the built-in Guest account is disabled
+Score                : 8
+AdditionalProperties : {[lastSynced, 2024-01-11T16:21:30Z], [implementationStatus, 0/1 exposed devices], [count, 0], [total, 1]…}
+
+ControlCategory      : Apps
+ControlName          : exo_SPF_records_for_all_domains
+Description          : For each domain that is configured in Exchange, a corresponding Sender Policy Framework (SPF) record should be created. SPF records allow Exchange Online Protection and other mail systems know where messages from your domains are allowed to originate. This information can be used to by that system to determine how to treat the message based on if it is being spoofed or is valid.
+Score                : 5
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:05Z], [implementationStatus, SPF is: true], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : aad_limited_administrative_roles
+Description          : <p>The Microsoft Azure Management application governs various Azure services and can be secured through the implementation of a Conditional Access policy. This policy can restrict specific user accounts from accessing the related portals and applications.</p> <p>When Conditional Access policy is targeted to the Microsoft Azure Management application, within the Conditional Access policy app picker the policy will be enforced for tokens issued to application IDs of a set of services closely bound to the portal.</p> <ul> <li>Azure Resource Manager</li> <li>Azure portal, which also covers the Microsoft Entra admin center</li> <li>Azure Data Lake</li> <li>Application Insights API</li> <li>Log Analytics API</li> </ul> <p><em>Microsoft Azure Management</em> should be restricted to specific pre-determined administrative roles.</p> <p><strong>NOTE:</strong> Blocking Microsoft Azure Management will prevent non-privileged users from signing into most portals other than Microsoft 365 Defender and Microsoft Purview.</p> <p><strong>Rationale:</strong><br />Blocking sign-in to Azure Management applications and portals enhances security of sensitive data by restricting access to privileged users. This mitigates potential exposure due to administrative errors or software vulnerabilities, as well as acting as a defense in depth measure against security breaches.</p>
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:03Z], [implementationStatus, 'Microsoft Azure Management' is limited to administrative roles - 'Windows Azure Service Management API' is not yet enabled in the following policies: "block legacy authentication", "enable the multifactor timeout and persistent browser settings are set for administrators", "MFA-all users" and 3 Additional policies. Please go to "Implementation" tab to view the required steps to enable the setting.], [scoreInPercentage, 0]}
+
+ControlCategory      : Apps
+ControlName          : sway_block_sharing_with_outside_users
+Description          : <p>Sway is a new app from Microsoft Office that allows users to create and share interactive reports, personal stories, presentations, and more.<br />This setting controls user Sway sharing capability, both within and outside of the organization. By default, Sway is enabled for everyone in the organization.</p> <p><strong>Rationale</strong>:<br />Disable external sharing of Sway documents that can contain sensitive information to prevent accidental or arbitrary data leak.</p>
+Score                : 3
+AdditionalProperties : {[lastSynced, 2024-01-11T15:07:04Z], [implementationStatus, Sharing SWAY outside the organization is disabled], [scoreInPercentage, 100]}
+
+ControlCategory      : Apps
+ControlName          : exo_outlookaddins
+Description          : <p>Specify the administrators and users who can install and manage add-ins for Outlook in Exchange Online By default, users can install add-ins in their Microsoft Outlook Desktop client, allowing data access within the client application.</p> <p><strong>Rationale</strong>:<br />Attackers exploit vulnerable or custom add-ins to access user data. Disabling user installed add-ins in Microsoft Outlook reduces this threat surface.</p> <p><strong>
+Score                : 0
+AdditionalProperties : {[lastSynced, 2024-01-10T03:13:01Z], [implementationStatus, Installing Outlook add-ins configuration is disabled], [scoreInPercentage, 0]}
+

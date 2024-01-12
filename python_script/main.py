@@ -50,7 +50,12 @@ async def main():
 
 
 async def greet_user(graph: Graph):
-    # TODO
+    user = await graph.get_user()
+    if user:
+        print('Hello,', user.display_name)
+        # For Work/school accounts, email is in mail property
+        # Personal accounts, email is in userPrincipalName
+        print('Email:', user.mail or user.user_principal_name, '\n')
     return
 
 async def display_access_token(graph: Graph):

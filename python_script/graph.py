@@ -26,7 +26,21 @@ class Graph:
         self.device_code_credential = DeviceCodeCredential(client_id, tenant_id = tenant_id)
         self.user_client = GraphServiceClient(self.device_code_credential, graph_scopes)
         
-async def get_user_token(self):
-    graph_scopes = self.settings['graphUserScopes']
-    access_token = self.device_code_credential.get_token(graph_scopes)
-    return access_token.token
+    async def get_user_token(self):
+        graph_scopes = self.settings['graphUserScopes']
+        access_token = self.device_code_credential.get_token(graph_scopes)
+        return access_token.token
+    
+
+    async def get_user(self):
+        # Only request specific properties using $select
+        query_params = UserItemRequestBuilder.UserItemRequestBuilderGetQueryParameters(
+            select=['displayName', 'mail', 'userPrincipalName']
+        )
+
+        request_config = UserItemRequestBuilder.UserItemRequestBuilderGetRequestConfiguration(
+            query_parameters=query_params
+        )
+
+        user = await self.user_client.me.get(request_configuration=request_config)
+        return user
