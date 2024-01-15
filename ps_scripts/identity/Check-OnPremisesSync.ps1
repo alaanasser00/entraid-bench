@@ -21,22 +21,22 @@ function Check-OnPremisesSync {
         }
 
         $organization | Format-List OnPremisesSyncEnabled
+     
+        # Object Output
+        $outputControlScore = [PSCustomObject]@{
+            Control               = $controlTitle
+            ControlDescription    = $controlDescription
+            Finding               = $controlFinding
+            OnPremisesSyncEnabled = $OnPremisesSyncEnabled
+            LastSyncDateTime      = $OnPremisesLastSyncDateTime
+            Result                = $complianceResult
+        }
+    
+        return $outputControlScore
+        
     } catch {
         Write-Error "Failed to retrieve On-Premises Sync status: $_"
     }
-    
-     
-    # Object Output
-    $outputControlScore = [PSCustomObject]@{
-        Control               = $controlTitle
-        ControlDescription    = $controlDescription
-        Finding               = $controlFinding
-        OnPremisesSyncEnabled = $OnPremisesSyncEnabled
-        LastSyncDateTime      = $OnPremisesLastSyncDateTime
-        Result                = $complianceResult
-    }
-
-    return $outputControlScore
 }
 
 
