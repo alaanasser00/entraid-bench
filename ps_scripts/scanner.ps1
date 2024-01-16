@@ -1,18 +1,21 @@
 # Install required AzureAD module
 # Import-Module Microsoft.Graph
 
-# Connect to Entra ID
-<# if ($([array](Get-MgContext)).'Count' -gt 0) {
-    Disconnect-MgGraph
+# Function to prompt for authentication and connect to Graph
+function Connect-ToGraph {
+    # Prompt for credentials if not already connected
+    if (-not (Get-MgContext)) {
+        Connect-MgGraph -Scopes ([string[]](
+            'UserAuthenticationMethod.Read.All', 
+            'User.Read.All', 
+            'SecurityEvents.Read.All', 
+            'Policy.Read.All', 
+            'RoleManagement.Read.All', 
+            'AccessReview.Read.All'))
+    }
 }
-$null = Connect-MgGraph -Scopes ([string[]]('UserAuthenticationMethod.Read.All','User.ReadWrite.All')) -TenantId $TenantId -Environment 'Global' -ContextScope 'Process' #>
-$null = Connect-MgGraph -Scopes ([string[]](
-    'UserAuthenticationMethod.Read.All',
-    'User.Read.All',
-    'SecurityEvents.Read.All', 
-    'Policy.Read.All',
-    'RoleManagement.Read.All'))
 
+Connect-ToGraph
 
 # Variables
 

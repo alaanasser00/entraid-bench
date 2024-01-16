@@ -3,23 +3,20 @@ function Check-MicrosoftAuthenticatorFatigue {
     [CmdletBinding()]
     param()
 
+    Write-Output "------------------------------------------------------------------------"
+    Write-Output "5.2.3.1 (L1) Ensure Microsoft Authenticator is configured to protect against MFA fatigue"
     Write-Output "------------------------------------------------------------------------`n"
-    Write-Output "5.2.3.1 (L1) Ensure Microsoft Authenticator is configured to protect against MFA fatigue`n"
-    Write-Output "------------------------------------------------------------------------`n"
-
-
-    $controlTitle = "5.2.3.1 (L1) Ensure Microsoft Authenticator is configured to protect against MFA fatigue"
-    $controlDescription = "Microsoft has released additional settings to enhance the configuration of the Microsoft Authenticator application. These settings provide additional information and context to users who receive MFA passwordless and push requests, such as geographic location the request came from, the requesting application and requiring a number match. Ensure the following are Enabled.
-    • Require number matching for push notifications
-    • Show application name in push and passwordless notifications
-    • Show geographic location in push and passwordless notifications"
-
 
     try {
 
+        $controlTitle = "5.2.3.1 (L1) Ensure Microsoft Authenticator is configured to protect against MFA fatigue"
+        $controlDescription = "Microsoft has released additional settings to enhance the configuration of the Microsoft Authenticator application. These settings provide additional information and context to users who receive MFA passwordless and push requests, such as geographic location the request came from, the requesting application and requiring a number match. Ensure the following are Enabled.
+        • Require number matching for push notifications
+        • Show application name in push and passwordless notifications
+        • Show geographic location in push and passwordless notifications"
+    
         # Retrieve configuration for Microsoft Authenticator
         $authenticatorConfig = Get-MgPolicyAuthenticationMethodPolicyAuthenticationMethodConfiguration -AuthenticationMethodConfigurationId MicrosoftAuthenticator
-
         
         # Check if Microsoft Authenticator is disabled
         if ($authenticatorConfig.State -eq "disabled") {
@@ -31,7 +28,6 @@ function Check-MicrosoftAuthenticatorFatigue {
                 Finding               = $controlFinding
                 Result                = "NOT COMPLIANT"
             }
-        
         } 
         
         # if Microsoft Authenticator is enabled, check for MFA fatigue resistance settings
