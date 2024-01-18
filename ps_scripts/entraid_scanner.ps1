@@ -1,21 +1,48 @@
-# Install required AzureAD module
-Import-Module Microsoft.Graph
+Write-Host @"
 
-# Function to prompt for authentication and connect to Graph
-function Connect-ToGraph {
-    # Prompt for credentials if not already connected
-    if (-not (Get-MgContext)) {
-        Connect-MgGraph -Scopes ([string[]](
-            'UserAuthenticationMethod.Read.All', 
-            'User.Read.All', 
-            'SecurityEvents.Read.All', 
-            'Policy.Read.All', 
-            'RoleManagement.Read.All', 
-            'AccessReview.Read.All'))
-    }
+_____       _               ___ ____    ____                  _     
+| ____|_ __ | |_ _ __ __ _  |_ _|  _ \  | __ )  ___ _ __   ___| |__  
+|  _| | '_ \| __| '__/ _` |  | || | | | |  _ \ / _ \ '_ \ / __| '_ \ 
+| |___| | | | |_| | | (_| |  | || |_| | | |_) |  __/ | | | (__| | | |
+|_____|_| |_|\__|_|  \__,_| |___|____/  |____/ \___|_| |_|\___|_| |_|
+
+
+
+"@
+
+# Install required AzureAD module
+if (Get-Module -ListAvailable -Name Microsoft.Graph) {
+    Write-Host "`nAMicrosoft.Graph module is already installed." -ForegroundColor Green
+} else {
+    Write-Host "`nAInstalling Microsoft.Graph module..." -ForegroundColor Cyan
+    Install-Module -Name Microsoft.Graph -Scope CurrentUser
 }
 
+# Function to connect to Graph with connection check
+function Connect-ToGraph {
+    if (Get-MgContext) {
+      Write-Host "`nAlready connected to Microsoft Graph." -ForegroundColor Green
+    } else {
+      Write-Host "`nConnecting to Microsoft Graph..." -ForegroundColor Cyan
+      try {
+        Connect-MgGraph -Scopes @(
+          'UserAuthenticationMethod.Read.All',
+          'User.Read.All',
+          'SecurityEvents.Read.All',
+          'Policy.Read.All',
+          'RoleManagement.Read.All',
+          'AccessReview.Read.All'
+        )
+        Write-Host "`nConnected successfully." -ForegroundColor Green
+      } catch {
+        Write-Error "Error connecting to Graph: $_"
+      }
+    }
+  }
+  
 Connect-ToGraph
+
+Write-Host "`nExecuting the Microsoft Entra ID Security Assessment Tool..." -ForegroundColor Green
 
 # Specify the path to your script files
 $scriptPath = "./controls"  # Replace with the actual path
@@ -25,7 +52,6 @@ $functionNames = Get-ChildItem -Path $scriptPath -Filter *.ps1 | ForEach-Object 
 
 # Map control file names to titles
 $functionTitleMappings = @{
-    # Add mappings here (replace with your actual function names and desired titles)
     "Check-authenticationStrength" = "Ensure 'Phishing-resistant MFA strength' is required for Administrators"
     "Check-BannedPasswords" = "Ensure custom banned passwords lists are used"
     "Check-BlockNonAdminTenantCreation" = "Ensure 'Restrict non-admin users from creating tenants' is set to 'Yes'"
@@ -36,24 +62,12 @@ $functionTitleMappings = @{
     "Check-SecurityDefaultStatus" = "Ensure Security Defaults is disabled on Azure Active Directory"
 }
 
-# Display control menu
-<# Write-Host "Select the control you want to use:"
-for ($i = 0; $i -lt $functionNames.Count; $i++) {
-    Write-Host "$(($i + 1))- $($functionNames[$i])"
-}
-Write-Host "------------------------------------------------"
-Write-Host "0- Run All Controls" #>
-
-# Get user choice
-$choice = Read-Host "Enter your choice (number):"
-
 # Initialize progress bar parameters
 $totalControls = $functionNames.Count
 $completedControls = 0
 
 
 # Validate and execute the chosen function(s)
-<# if ($choice -eq 0) { #>
     $allResults = @()
 
     foreach ($functionName in $functionNames) {
@@ -73,14 +87,4 @@ $completedControls = 0
     }
 
     $allResults | Export-Csv -Path "scan_results.csv" -NoTypeInformation
-    Write-Host "All results combined and exported to scan_results.csv"
-
-<# } else {
-    if ($choice -in 1..$functionNames.Count) {
-        $functionToRun = $functionNames[$choice - 1]
-        . "$scriptPath\$functionToRun.ps1" | Select Control, ControlDescription, Finding, OnPremisesSyncEnabled, LastSyncDateTime, DynamicGroupName, DynamicGroupTypes, DynamicGroupMembershipRule, Result | Export-Csv -Path ("$functionToRun.csv") -NoTypeInformation
-        Write-Host "Results exported to $scriptPath\$functionToRun.csv"
-    } else {
-        Write-Host "Invalid choice. Please try again."
-    }
-} #>
+    Write-Host "`nScript execution complete! All results combined and exported to scan_results.csv." -ForegroundColor Green
