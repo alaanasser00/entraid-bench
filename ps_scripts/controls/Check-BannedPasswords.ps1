@@ -2,13 +2,9 @@ function Check-BannedPasswordSettings {
     [CmdletBinding()]
     param()
 
-    Write-Output "------------------------------------------------------------------------"
-    Write-Output "5.2.3.2 (L1) Ensure custom banned passwords lists are used`n"
-    Write-Output "------------------------------------------------------------------------`n"
-
     try {
 
-        $controlTitle = "5.2.3.2 (L1) Ensure custom banned passwords lists are used"
+        $controlTitle = "Ensure custom banned passwords lists are used"
         $controlDescription = "Creating a new password can be difficult regardless of one's technical background. It is common to look around one's environment for suggestions when building a password, however, this may include picking words specific to the organization as inspiration for a password. An adversary may employ what is called a 'mangler' to create permutations of these specific words in an attempt to crack passwords or hashes making it easier to reach their goal."
     
         # Retrieve the group setting
@@ -58,8 +54,5 @@ function Check-BannedPasswordSettings {
     }
 }
 
-. ../scanner.ps1
-  
 # Call the function to check the settings
-Check-BannedPasswordSettings | Format-List
-  
+Check-BannedPasswordSettings

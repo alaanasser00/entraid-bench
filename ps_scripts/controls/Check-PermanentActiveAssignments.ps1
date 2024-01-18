@@ -2,19 +2,15 @@ function Check-PermanentActiveAssignments {
     [CmdletBinding()]
     param()
 
-    Write-Output "------------------------------------------------------------------------"
-    Write-Output "5.3.1 (L2) Ensure 'Privileged Identity Management' is used to manage roles"
-    Write-Output "------------------------------------------------------------------------`n"
+    try {
 
-<#     try {
- #>
-        $controlTitle = "5.3.1 (L2) Ensure 'Privileged Identity Management' is used to manage roles"
+        $controlTitle = "Ensure 'Privileged Identity Management' is used to manage roles"
         $controlDescription = "Azure Active Directory Privileged Identity Management can be used to audit roles, allow just in time activation of roles and allow for periodic role attestation. Organizations should remove permanent members from privileged Office 365 roles and instead make them eligible, through a JIT activation workflow."
 
         # Get permanent (no endDateTime) active role assignments
         $permanentActiveAssignments = Get-MgRoleManagementDirectoryRoleAssignmentScheduleInstance | Where-Object { $_.EndDateTime -eq $null } | Select-Object AssignmentType, PrincipalId, RoleDefinitionId, StartDateTime, EndDateTime
     
-        $users = Get-MgUser -Property Id, DisplayName -CountVariable CountVar <# -ConsistencyLevel eventual #>
+        $users = Get-MgUser -Property Id, DisplayName -CountVariable CountVar -All
         $roles = Get-MgRoleManagementDirectoryRoleDefinition -Property Id, DisplayName
     
         $userIdNameMap = @{}
@@ -41,7 +37,7 @@ function Check-PermanentActiveAssignments {
                     EndDateTime = $_.EndDateTime
                 }
             }
-            $FindingDetails | Export-Csv -Path "PermanentActiveAssignments2.csv" -NoTypeInformation
+            $FindingDetails | Export-Csv -Path "PermanentActiveAssignments.csv" -NoTypeInformation
             return [PSCustomObject]@{
                 Control            = $controlTitle
                 ControlDescription = $controlDescription
@@ -68,12 +64,11 @@ function Check-PermanentActiveAssignments {
                 Result             = "COMPLIANT"
             }
         }
-    <# }
+    }
     catch {
         Write-Error "An error occurred: $_"
-    } #>
+    }
 }
 
-. ../scanner.ps1
-
+# Usage in your scripts:
 Check-PermanentActiveAssignments

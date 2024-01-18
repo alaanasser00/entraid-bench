@@ -3,13 +3,9 @@ function Check-MicrosoftAuthenticatorFatigue {
     [CmdletBinding()]
     param()
 
-    Write-Output "------------------------------------------------------------------------"
-    Write-Output "5.2.3.1 (L1) Ensure Microsoft Authenticator is configured to protect against MFA fatigue"
-    Write-Output "------------------------------------------------------------------------`n"
-
     try {
 
-        $controlTitle = "5.2.3.1 (L1) Ensure Microsoft Authenticator is configured to protect against MFA fatigue"
+        $controlTitle = "Ensure Microsoft Authenticator is configured to protect against MFA fatigue"
         $controlDescription = "Microsoft has released additional settings to enhance the configuration of the Microsoft Authenticator application. These settings provide additional information and context to users who receive MFA passwordless and push requests, such as geographic location the request came from, the requesting application and requiring a number match. Ensure the following are Enabled.
         • Require number matching for push notifications
         • Show application name in push and passwordless notifications
@@ -65,6 +61,4 @@ function Check-MicrosoftAuthenticatorFatigue {
 
 
 # Usage in your scripts:
-. ../scanner.ps1
-
-Check-MicrosoftAuthenticatorFatigue | Format-List
+Check-MicrosoftAuthenticatorFatigue

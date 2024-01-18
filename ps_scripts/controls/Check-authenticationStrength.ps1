@@ -3,13 +3,9 @@ function Check-AuthenticationStrength {
     [CmdletBinding()]
     param()
 
-    Write-Output "------------------------------------------------------------------------"
-    Write-Output "5.2.2.5 (L2) Ensure 'Phishing-resistant MFA strength' is required for Administrators"
-    Write-Output "------------------------------------------------------------------------`n"
-
     try {
 
-        $controlTitle = "5.2.2.5 (L2) Ensure 'Phishing-resistant MFA strength' is required for Administrators"
+        $controlTitle = "Ensure 'Phishing-resistant MFA strength' is required for Administrators"
         $controlDescription = "Authentication strength is a Conditional Access control that allows administrators to specify which combination of authentication methods can be used to access a resource. For example, they can make only phishing-resistant authentication methods available to access a sensitive resource. But to access a non-sensitive resource, they can allow less secure multifactor authentication (MFA) combinations, such as password + SMS. Microsoft has 3 built-in authentication strengths. MFA strength, Passwordless MFA strength, and Phishing-resistant MFA strength. Ensure administrator roles are using a CA policy with Phishing-resistant MFA strength."
 
         # Retrieve all Conditional Access policies
@@ -48,6 +44,7 @@ function Check-AuthenticationStrength {
             Finding            = $controlFinding
             Result             = $controlResult
         }
+    
     }
     catch {
         Write-Error "An error occurred: $_"
@@ -55,7 +52,8 @@ function Check-AuthenticationStrength {
 }
 
 
-# Usage in your scripts:
-. ../scanner.ps1
-
-Check-authenticationStrength | Format-List
+# Call the function and capture output
+#$results = Check-authenticationStrength | select Control, ControlDescription, Finding, Result
+Check-authenticationStrength 
+# Export to CSV
+#$results | Export-Csv -Path "Check-AuthenticationStrength.csv" -NoTypeInformation
